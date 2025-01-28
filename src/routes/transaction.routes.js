@@ -8,5 +8,8 @@ routes.use(authMiddleware); // Todas as rotas precisam de autenticação
 
 routes.post('/', TransactionController.create);
 routes.get('/', TransactionController.index);
+routes.get('/:transactionId', TransactionController.show);
+routes.put('/:transactionId', TransactionController.update);
+routes.delete('/:transactionId', TransactionController.delete);
 
 module.exports = routes;
