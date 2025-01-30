@@ -5,7 +5,9 @@ class TransactionController {
   async create(req, res) {
     try {
       const { title, amount, type, category } = req.body;
-
+      if (!title || !amount || !type || !category) {
+        return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
+      }
       const transaction = await prisma.transaction.create({
         data: {
           title,
@@ -41,40 +43,44 @@ class TransactionController {
   async show(req, res) {
     try {
       const { transactionId } = req.params;
-      console.log('TransactionId:', transactionId);
-      console.log('UserId:', req.userId);
+      // console.log('TransactionId:', transactionId);
+      // console.log('UserId:', req.userId);
   
-      // Consulte o banco de dados
+      // Consultar o banco de dados
       const transaction = await prisma.transaction.findFirst({
         where: {
           id: transactionId, // Use o transactionId diretamente (sem conversão)
           userId: req.userId
         }
       });
-      console.log('Transaction found:', transaction);
+      // console.log('Transaction found:', transaction);
   
-      // Verifique se a transação foi encontrada
+      // Verificar se a transação foi encontrada
       if (!transaction) {
         return res.status(404).json({ error: 'Transação não encontrada' });
       }
   
-      // Retorne a transação encontrada
+      // Retornar a transação encontrada
       return res.status(200).json(transaction);
     } catch (error) {
-      console.error('Erro ao buscar transação:', error);
+      // console.error('Erro ao buscar transação:', error);
       return res.status(500).json({ error: 'Erro ao buscar transação' });
     }
   }
-
   async update(req, res) {
   try {
+    
     const { transactionId } = req.params;
     const { title, amount, type, category } = req.body;
+    if (!title || !amount || !type || !category) {
+      return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
+    }
 
     const transaction = await prisma.transaction.update({
+      //adicionar verificação de usuário
       where: {
         id: transactionId,
-        userId: req.userId // Adicione essa verificação
+        userId: req.userId 
       },
       data: {
         title,
@@ -84,7 +90,7 @@ class TransactionController {
       }
     });
 
-    return res.status(200).json(transaction); // Adicione status(200) explicitamente
+    return res.status(200).json(transaction); 
   } catch (error) {
     console.error('Erro ao atualizar transação:', error);
     return res.status(500).json({ error: 'Erro ao atualizar transação' });
@@ -98,11 +104,11 @@ class TransactionController {
     await prisma.transaction.delete({
       where: {
         id: transactionId,
-        userId: req.userId // Adicione essa verificação
+        userId: req.userId // Adicionar verificação de usuario
       }
     });
 
-    return res.status(200).json({ message: 'Transação excluída com sucesso' }); // Adicione status(200) explicitamente
+    return res.status(200).json({ message: 'Transação excluída com sucesso' }); 
   } catch (error) {
     console.error('Erro ao excluir transação:', error);
     return res.status(500).json({ error: 'Erro ao excluir transação' });
