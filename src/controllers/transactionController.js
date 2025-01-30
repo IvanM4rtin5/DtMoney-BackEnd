@@ -66,7 +66,7 @@ class TransactionController {
     }
   }
 
-async update(req, res) {
+  async update(req, res) {
   try {
     const { transactionId } = req.params;
     const { title, amount, type, category } = req.body;
@@ -91,7 +91,7 @@ async update(req, res) {
   }
 }
 
-async delete(req, res) {
+ async delete(req, res) {
   try {
     const { transactionId } = req.params;
 
