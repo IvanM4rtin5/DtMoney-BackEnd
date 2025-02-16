@@ -1,38 +1,35 @@
 ## 🚀 API de Gerenciamento de Transações
-Este projeto é uma API para gerenciamento de transações financeiras, desenvolvida com Node.js, Express e Prisma. Ele permite que os usuários se registrem, façam login, criem, leiam, atualizem e excluam transações.
+Este projeto é uma API para gerenciamento de transações financeiras, desenvolvida com **Node.js**, **Express** e **Prisma**. Ele permite que os usuários se registrem, façam login, criem, leiam, atualizem e excluam transações.
 
-Node.js
-Express
-Prisma
-JWT
-PostgreSQL
+[![Node.js](https://img.shields.io/badge/Node.js-18.13.0-339933?logo=node.js)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-4.18.2-000000?logo=express)](https://expressjs.com/)
+[![Prisma](https://img.shields.io/badge/Prisma-4.16.2-2D3748?logo=prisma)](https://www.prisma.io/)
+[![JWT](https://img.shields.io/badge/JWT-8.5.1-000000?logo=json-web-tokens)](https://jwt.io/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13.0-336791?logo=postgresql)](https://www.postgresql.org/)
+
+---
 
 ### � Funcionalidades
 
-- Autenticação de Usuário:
+- **Autenticação de Usuário:**
+  - Registro de novos usuários.
+  - Login de usuários existentes com geração de token JWT.
 
-- Registro de novos usuários.
+- **Gerenciamento de Transações:**
+  - Criação de novas transações.
+  - Listagem de todas as transações do usuário.
+  - Visualização de uma transação específica.
+  - Atualização de uma transação existente.
+  - Exclusão de uma transação.
 
-- Login de usuários existentes com geração de token JWT.
-
-- Gerenciamento de Transações:
-
-- Criação de novas transações.
-
-- Listagem de todas as transações do usuário.
-
-- Visualização de uma transação específica.
-
-- Atualização de uma transação existente.
-
-- Exclusão de uma transação.
+---
 
 ### 🛠️ Tecnologias Utilizadas
 <div align="left"> <img src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white" alt="Node.js" /> <img src="https://img.shields.io/badge/Express-000000?logo=express&logoColor=white" alt="Express" /> <img src="https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white" alt="Prisma" /> <img src="https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white" alt="JWT" /> <img src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white" alt="PostgreSQL" /> <img src="https://img.shields.io/badge/bcryptjs-4.3.0-000000?logo=bcrypt" alt="bcryptjs" /> <img src="https://img.shields.io/badge/dotenv-16.0.3-000000?logo=dotenv" alt="dotenv" /> <img src="https://img.shields.io/badge/cors-2.8.5-000000?logo=cors" alt="cors" /> </div>
 
 ### 🚀 Como Executar o Projeto
 Pré-requisitos
-Certifique-se de ter o Node.js instalado em sua máquina. Você pode verificar a versão instalada com o comando:
+Certifique-se de ter o **Node.js** instalado em sua máquina. Você pode verificar a versão instalada com o comando:
 
 ```bash
 Copy
