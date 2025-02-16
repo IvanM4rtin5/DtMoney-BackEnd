@@ -1,4 +1,4 @@
-## 🚀 API de Gerenciamento de Transações
+# 🚀 API de Gerenciamento de Transações
 Este projeto é uma API para gerenciamento de transações financeiras, desenvolvida com **Node.js**, **Express** e **Prisma**. Ele permite que os usuários se registrem, façam login, criem, leiam, atualizem e excluam transações.
 
 [![Node.js](https://img.shields.io/badge/Node.js-18.13.0-339933?logo=node.js)](https://nodejs.org/)
@@ -9,7 +9,7 @@ Este projeto é uma API para gerenciamento de transações financeiras, desenvol
 
 ---
 
-### � Funcionalidades
+## � Funcionalidades
 
 - **Autenticação de Usuário:**
   - Registro de novos usuários.
@@ -24,10 +24,10 @@ Este projeto é uma API para gerenciamento de transações financeiras, desenvol
 
 ---
 
-### 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 <div align="left"> <img src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white" alt="Node.js" /> <img src="https://img.shields.io/badge/Express-000000?logo=express&logoColor=white" alt="Express" /> <img src="https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white" alt="Prisma" /> <img src="https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white" alt="JWT" /> <img src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white" alt="PostgreSQL" /> <img src="https://img.shields.io/badge/bcryptjs-4.3.0-000000?logo=bcrypt" alt="bcryptjs" /> <img src="https://img.shields.io/badge/dotenv-16.0.3-000000?logo=dotenv" alt="dotenv" /> <img src="https://img.shields.io/badge/cors-2.8.5-000000?logo=cors" alt="cors" /> </div>
 
-### 🚀 Como Executar o Projeto
+## 🚀 Como Executar o Projeto
 Pré-requisitos
 Certifique-se de ter o **Node.js** instalado em sua máquina. Você pode verificar a versão instalada com o comando:
 
@@ -73,7 +73,7 @@ npm start
 ```
 O servidor estará rodando em http://localhost:3000.
 
-#### 📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 ```Copy
 prisma/
 ├── migrations/           # Migrações do banco de dados
@@ -107,9 +107,9 @@ package-lock.json        # Versões das dependências
 package.json             # Dependências do projeto
 ```
 
-### 🔗 Links Relacionados
+## 🔗 Links Relacionados
 
-Frontend do Projeto: DtMoney-Frontend
+Frontend do Projeto: DT Money - Frontend
 
 ### 💡 Meu Esforço e Dedicação
 Este projeto foi desenvolvido com muito esforço e dedicação, buscando demonstrar minhas habilidades como desenvolvedor FullStack. Alguns dos desafios que enfrentei e superei incluem:
@@ -122,7 +122,7 @@ Gerenciamento de Transações: Criação de uma API robusta para gerenciar trans
 
 Acredito que este projeto reflete minha capacidade de trabalhar com tecnologias modernas e entregar soluções de alta qualidade.
 
-### 📧 Contato
+## 📧 Contato
 Se você tiver alguma dúvida ou quiser entrar em contato, sinta-se à vontade para me enviar uma mensagem:
 
 **Nome**: Ivan Martins
