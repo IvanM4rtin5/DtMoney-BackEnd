@@ -1,11 +1,11 @@
 ## 🚀 API de Gerenciamento de Transações
 Este projeto é uma API para gerenciamento de transações financeiras, desenvolvida com Node.js, Express e Prisma. Ele permite que os usuários se registrem, façam login, criem, leiam, atualizem e excluam transações.
 
-- Node.js
-- Express
-- Prisma
-- JWT
-- PostgreSQL
+Node.js
+Express
+Prisma
+JWT
+PostgreSQL
 
 ### � Funcionalidades
 
