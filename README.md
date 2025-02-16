@@ -108,8 +108,8 @@ package.json             # Dependências do projeto
 ```
 
 ## 🔗 Links Relacionados
+[Frontend do Projeto:](DtMoney-Frontend)
 
-Frontend do Projeto: DT Money - Frontend
 
 ### 💡 Meu Esforço e Dedicação
 Este projeto foi desenvolvido com muito esforço e dedicação, buscando demonstrar minhas habilidades como desenvolvedor FullStack. Alguns dos desafios que enfrentei e superei incluem:
