@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "api-dtmoney",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,7 +7,7 @@
     "start": "node src/server.js"     
   },
   "keywords": [],
-  "author": "",
+  "author": "ivan martins",
   "license": "ISC",
   "description": "",
   "dependencies": {
