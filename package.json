@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "npx prisma migrate deploy && pm2 start ecosystem.config.js --env production",
     "dev": "nodemon src/server.js",
-    "start": "pm2 start ecosystem.config.js --env production"
+    "migrate": "npx prisma migrate deploy"
   },
   "keywords": [],
-  "author": "ivan martins",
+  "author": "Ivan martins",
   "license": "ISC",
   "description": " Aplicação para gerenciamento de transações financeiras",
   "dependencies": {
