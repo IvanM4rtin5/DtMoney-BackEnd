@@ -62,9 +62,8 @@ Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente ne
 Copy
 DATABASE_URL="postgresql://user:password@localhost:5432/dbname"
 JWT_SECRET="your_jwt_secret"
-Execute as migrações do Prisma:
 ```
-
+Execute as migrações do Prisma:
 ```bash
 Copy
 npx prisma migrate dev --name init
