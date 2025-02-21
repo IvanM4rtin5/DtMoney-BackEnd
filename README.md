@@ -42,7 +42,7 @@ Clone o repositório:
 
 ```bash
 Copy
-git clone https://github.com/IvanM4rtin5/DtMoney-BackEnd
+git clone https://github.com/IvanM4rtin5/DtMoney-BackEnd.git
 cd seu-repositorio
 ```
 Instale as dependências:
