@@ -43,6 +43,9 @@ Clone o repositório:
 ```bash
 Copy
 git clone https://github.com/IvanM4rtin5/DtMoney-BackEnd.git
+```
+Entre na sua pasta:
+```
 cd seu-repositorio
 ```
 Instale as dependências:
@@ -55,11 +58,12 @@ Configure as variáveis de ambiente:
 
 Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente necessárias, como a conexão com o banco de dados e a chave secreta para o JWT.
 
-env
+```env
 Copy
 DATABASE_URL="postgresql://user:password@localhost:5432/dbname"
 JWT_SECRET="your_jwt_secret"
 Execute as migrações do Prisma:
+```
 
 ```bash
 Copy
