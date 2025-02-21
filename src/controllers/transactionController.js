@@ -34,11 +34,10 @@ class TransactionController {
           createdAt: 'desc'
         }
       });
-
-      const formattedTransactions = transactions.map(transaction => ({
-        ...transaction,
-        amount: Number(transaction.amount), 
-      }));
+      const formattedTransactions = transactions.map((tx) => ({
+        ...tx,
+        amount: Number(tx.amount)
+      }))
 
       return res.json(formattedTransactions);
     } catch (error) {
@@ -97,7 +96,7 @@ class TransactionController {
 
     return res.status(200).json(transaction); 
   } catch (error) {
-    console.error('Erro ao atualizar transação:', error);
+    // console.error('Erro ao atualizar transação:', error);
     return res.status(500).json({ error: 'Erro ao atualizar transação' });
   }
 }
