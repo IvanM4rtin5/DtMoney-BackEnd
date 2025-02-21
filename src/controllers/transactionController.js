@@ -35,7 +35,12 @@ class TransactionController {
         }
       });
 
-      return res.json(transactions);
+      const formattedTransactions = transactions.map(transaction => ({
+        ...transaction,
+        amount: Number(transaction.amount), 
+      }));
+
+      return res.json(formattedTransactions);
     } catch (error) {
       return res.status(400).json({ error: error.message });
     }
@@ -43,27 +48,27 @@ class TransactionController {
   async show(req, res) {
     try {
       const { transactionId } = req.params;
-      // console.log('TransactionId:', transactionId);
-      // console.log('UserId:', req.userId);
   
       // Consultar o banco de dados
       const transaction = await prisma.transaction.findFirst({
         where: {
-          id: transactionId, // Use o transactionId diretamente (sem conversão)
+          id: transactionId, 
           userId: req.userId
         }
       });
-      // console.log('Transaction found:', transaction);
-  
+      
       // Verificar se a transação foi encontrada
       if (!transaction) {
         return res.status(404).json({ error: 'Transação não encontrada' });
       }
   
-      // Retornar a transação encontrada
-      return res.status(200).json(transaction);
-    } catch (error) {
-      // console.error('Erro ao buscar transação:', error);
+      // Retornar a transação formatada
+      return res.status(200).json({
+        ...transaction,
+        amount: Number(transaction.amount)
+      });
+  
+    } catch (error) { 
       return res.status(500).json({ error: 'Erro ao buscar transação' });
     }
   }

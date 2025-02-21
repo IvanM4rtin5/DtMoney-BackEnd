@@ -20,8 +20,8 @@ model User {
 model Transaction {
   id        String   @id @default(uuid())
   title     String
-  amount    Decimal  // Mudei para Decimal que é melhor para valores monetários
-  type      String   // 'deposit' ou 'withdraw'
+  amount    Decimal  
+  type      String   
   category  String
   createdAt DateTime @default(now())
   user      User     @relation(fields: [userId], references: [id])
