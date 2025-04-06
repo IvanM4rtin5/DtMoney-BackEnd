@@ -10,7 +10,14 @@ console.log('SERVER_PORT:', process.env.SERVER_PORT);
 console.log('NODE_ENV:', process.env.NODE_ENV);
 console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'Definido' : 'Não definido');
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://dtmoney-financial-app.netlify.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+  allowedHeaders: ['Content-Type', 'Authorization'], 
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use((req, res, next) => {
     console.log(`${req.method} ${req.url}`);
