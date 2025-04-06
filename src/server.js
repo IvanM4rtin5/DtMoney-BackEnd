@@ -10,14 +10,19 @@ console.log('SERVER_PORT:', process.env.SERVER_PORT);
 console.log('NODE_ENV:', process.env.NODE_ENV);
 console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'Definido' : 'Não definido');
 
-const corsOptions = {
-  origin: ['http://localhost:3001','https://dtmoney-financial-app.netlify.app'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-  allowedHeaders: ['Content-Type', 'Authorization'], 
-  credentials: true,
-};
+const allowedOrigins =['http://localhost:3001','https://dtmoney-financial-app.netlify.app/'];
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin : function(origin, callback){
+    if(!origin || allowedOrigins.indexOf(origin) !== -1){
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
+
 app.use(express.json());
 app.use((req, res, next) => {
     console.log(`${req.method} ${req.url}`);
