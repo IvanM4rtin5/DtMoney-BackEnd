@@ -10,7 +10,6 @@ class UserController {
     try {
       const { name, email, password } = req.body;
 
-      // Verifica se o usuário já existe
       const userExists = await prisma.user.findUnique({
         where: { email }
       });
@@ -18,10 +17,8 @@ class UserController {
       if (userExists) {
         return res.status(400).json({ error: 'Usuário já existe' });
       }
-      // Cria senha criptografada
       const hashedPassword = await bcrypt.hash(password, 8);
 
-      // Cria usuário no banco de dados
       const user = await prisma.user.create({
         data: {
           name,
