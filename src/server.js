@@ -5,7 +5,6 @@ const routes = require('./routes');
 
 const app = express();
 
-// Debug das variáveis de ambiente
 console.log('Variáveis de ambiente carregadas:');
 console.log('SERVER_PORT:', process.env.SERVER_PORT);
 console.log('NODE_ENV:', process.env.NODE_ENV);
