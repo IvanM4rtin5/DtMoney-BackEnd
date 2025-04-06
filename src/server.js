@@ -11,7 +11,7 @@ console.log('NODE_ENV:', process.env.NODE_ENV);
 console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'Definido' : 'Não definido');
 
 const corsOptions = {
-  origin: 'https://dtmoney-financial-app.netlify.app', 
+  origin: ['http://localhost:3001','https://dtmoney-financial-app.netlify.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials: true,
