@@ -4,7 +4,7 @@ const authMiddleware = require('../middleware/auth');
 
 const routes = Router();
 
-routes.use(authMiddleware); // Todas as rotas precisam de autenticação
+routes.use(authMiddleware); 
 
 routes.post('/', TransactionController.create);
 routes.get('/', TransactionController.index);
