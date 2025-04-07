@@ -20,10 +20,8 @@ export const createTransaction = async (userId, { title, amount, type, category 
       throw new BadRequestError('A categoria da transação é obrigatória');
     }
 
-    // Formata o valor para garantir que seja número
     const formattedAmount = Number(amount);
 
-    // Criação da transação
     const transaction = await prisma.transaction.create({
       data: {
         title: title.trim(),
@@ -105,7 +103,7 @@ export const getTransactionById = async (transactionId, userId) => {
     const transaction = await prisma.transaction.findFirst({
       where: {
         id: transactionId,
-        userId, // Garante que o usuário só acesse suas próprias transações
+        userId, 
       },
     });
 
