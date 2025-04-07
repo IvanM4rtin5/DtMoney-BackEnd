@@ -10,7 +10,10 @@ console.log('SERVER_PORT:', process.env.SERVER_PORT);
 console.log('NODE_ENV:', process.env.NODE_ENV);
 console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'Definido' : 'Não definido');
 
-const allowedOrigins =['http://localhost:3001','https://dtmoney-financial-app.netlify.app/'];
+const allowedOrigins =[
+  'http://localhost:3001',
+  'https://dtmoney-financial-app.netlify.app'
+];
 
 app.use(cors({
   origin : function(origin, callback){
