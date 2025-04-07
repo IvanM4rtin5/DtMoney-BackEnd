@@ -108,7 +108,7 @@ class TransactionController {
     await prisma.transaction.delete({
       where: {
         id: transactionId,
-        userId: req.userId // Adicionar verificação de usuario
+        userId: req.userId 
       }
     });
 
